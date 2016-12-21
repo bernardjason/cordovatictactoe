@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org">
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"
+  type="text/css">
+  <link rel="stylesheet" href="css/index.css" type="text/css">
+
+  <title>TicTacToe</title>
+  <script src="js/lib/jquery-1.11.1.min.js" type="text/javascript" ></script>
+  <script src="js/lib/jquery.mobile-1.4.5.min.js" type= "text/javascript"></script>
+  <script type="text/javascript" src="cordova.js"  ></script>
+  <script type="text/javascript" src="js/index.js" ></script>
+  <script type="text/javascript" src="js/alert.js" ></script>
+</head>
+
+<body>
+  <div data-role="page" id="home">
+    <div data-role="panel" id="navpanel" data-theme="a"
+    data-display="overlay" data-position="left">
+      <div id="menu" data-role="controlgroup" data-corners="false">
+        <a data-rel="close" href="#player1" data-role=
+        "button">Player X</a> <a data-rel="close" href="#player2"
+        data-role="button">Player O</a> <a data-rel="close" href=
+        "#game" data-role="button">Game</a>
+      </div>
+    </div>
+
+    <div id="header" data-role="header">
+      <a id="bars-button" data-icon="bars" class="ui-btn-left"
+      style="margin-top:1px;" href="#navpanel">Menu</a>
+
+      <h1>TicTacToe</h1>
+    </div>
+
+    <div style=
+    "margin-top:40px;margin-left:10px;margin-right:10px;" class=
+    "app">
+      <div id="game" class="hidden">
+        <div id="currentplayerchip" class="chip">
+          <!-- created with javascript  -->
+        </div>
+
+        <table align="center" >
+          <tr> <td id="ttt00"></td> <td id="ttt01"></td> <td id="ttt02"></td> </tr>
+          <tr> <td id="ttt10"></td> <td id="ttt11"></td> <td id="ttt12"></td> </tr>
+          <tr> <td id="ttt20"></td> <td id="ttt21"></td> <td id="ttt22"></td> </tr>
+        </table><button id="newgame">newgame</button>
+      </div>
+
+      <div id="player1" class="hidden">
+        <div class="card">
+          <img id="player1image" src="img/img_avatar.png" alt=
+          "Avatar" style="width:50%;max-width:256px;" >
+          <div class="container">
+            <h4><b>Player 1!!!</b></h4>
+
+            <p>nice photo for X</p><button id=
+            "player1clear">clear</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="player2" class="hidden">
+        <div class="card">
+          <img id="player2image" src="img/img_avatar.png" alt=
+          "Avatar" style="width:50%;max-width:256px;">
+
+          <div class="container">
+            <h4><b>Player 2!!!</b></h4>
+
+            <p>O a nice photo</p><button id=
+            "player2clear">clear</button>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <div data-role="popup" id="cardModal">
+          <div data-role="main" class="ui-content">
+            <div class="card">
+              <img id="imageFile" src="img/img_avatar.png" alt=
+              "Avatar" style="width:50%">
+
+              <div class="container">
+                <h4><b id="cardwho">cardwho!!!</b></h4>
+
+                <p id="cardarea">cardarea!!!!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="popup" id="browserAlertSimple">
+        <div data-role="header">
+          <h1 id="alertHeaderMain">alertHeaderMain!!</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+
+          <p id="alertText">alertText!!</p><a href="#" class=
+          "ui-btn ui-corner-all ui-shadow ui-btn-inline" data-rel=
+          "back">Close</a>
+        </div>
+      </div>
+
+      <div id="browserAlertInput" data-role="popup">
+        <div data-role="header">
+          <h1 id="alertHeaderMainInput">alertHeaderMainInput!!</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+          <!-- <h2 id="alertHeaderTitleInput"> alertHeaderTitleInput!!</h2> -->
+
+          <p id="alertTextInput">alertTextInput!!</p><input id=
+          "browserAlertInputText" class=
+          "form-control input-group-lg reg_name" type="text" name=
+          "alertTextInputValue" title="Enter last name"
+          placeholder="..."> <a href="#" class=
+          "ui-btn ui-corner-all ui-shadow ui-btn-inline" data-rel=
+          "back">Close</a> <a href="#" id="browserAlertInputOk"
+          data-rel="back" class=
+          "ui-btn ui-corner-all ui-shadow ui-btn-inline">Ok</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
