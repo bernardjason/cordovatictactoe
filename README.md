@@ -27,10 +27,16 @@ cordova platform save
 
 then to run locally 
 
-```cordova serve browser```
+```
+cordova serve browser
+```
 or to deploy to android
-```cordova run android```
+```
+cordova run android
+```
 
 to get the splash screen and logo into android build run
-```./copy.sh```
+```
+./copy.sh
+```
 I cannot get cordova to comfigure this and pick up the files using config.xml
